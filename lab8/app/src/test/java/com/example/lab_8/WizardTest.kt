@@ -47,6 +47,7 @@ class WizardTest {
         assertEquals(70, evilWizard.mana)
     }
 
+    @Test
     fun train_enoughMana() {
         // we have a starter mana of 30 + spellPower of 10 by virtue of setup
         evilWizard.train()
@@ -54,6 +55,7 @@ class WizardTest {
         assertEquals(11, evilWizard.spellPower) // spellPower increased by 1
     }
 
+    @Test
     fun train_notEnoughMana() {
         evilWizard.mana = 4 // we need at least 5 mana to train properly
         assertEquals(4, evilWizard.mana)
